@@ -21,7 +21,7 @@ module.exports = {
 
     response.header('X-Total-Count', count['count(*)'])
 
-    return response.json({ data: { incidents } })
+    return response.json({ incidents })
   },
 
   async create(request, response) {
@@ -35,7 +35,7 @@ module.exports = {
       ong_id
     })
 
-    return response.json({ data: { id } })
+    return response.json({ id })
   },
 
   async delete(request, response) {

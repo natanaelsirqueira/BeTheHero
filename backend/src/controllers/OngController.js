@@ -5,7 +5,7 @@ module.exports = {
   async index(_request, response) {
     const ongs = await conn('ongs').select('*')
 
-    return response.json({ data: { ongs } })
+    return response.json({ ongs })
   },
   async create(request, response) {
     const { name, email, whatsapp, city, uf } = request.body
@@ -21,6 +21,6 @@ module.exports = {
       uf
     })
 
-    return response.json({ data: { id } })
+    return response.json({ id })
   }
 }
